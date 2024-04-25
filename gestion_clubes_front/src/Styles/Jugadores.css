@@ -1,0 +1,33 @@
+.jugadores-container {
+  
+  display: grid;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-template-columns:repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  
+  );
+  padding: 30px;
+  grid-gap: 30px;
+
+}
+
+.Buscador{
+  background-color: darkkhaki;
+  margin-top: 40px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
