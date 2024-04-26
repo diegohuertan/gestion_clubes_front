@@ -35,21 +35,7 @@ function Implementos() {
   return (
     <PageContainer>
     <div className="card-container">
-      {implementos.map((implemento) => (
-        <Card key={implemento.id} className='card'>
-          <Card.Body>
-            <Card.Title>Implemento #{implemento.id}</Card.Title>
-            <Card.Text>
-              <strong>Fecha de compra:</strong> {implemento.fecha}<br />
-              <strong>Tipo:</strong> {implemento.tipo}<br />
-              <strong>Estado:</strong> {implemento.estado}<br />
-            </Card.Text>
-            <Button variant="danger" onClick={() => handleEliminarImplemento(implemento.id)}>
-              Eliminar
-            </Button>
-          </Card.Body>
-        </Card>
-      ))}
+      
     </div>
     </PageContainer>
   );

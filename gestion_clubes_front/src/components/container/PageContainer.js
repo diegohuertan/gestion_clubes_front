@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import './PageContainer.css';
 
 const PageContainer = ({ title, description, children }) => (
-  <div className="mainApp">
+  <div className="bg-darkbody w-full min-h-screen">
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />

@@ -3,3 +3,10 @@
     background-color: black;
     color: white;
 }
+/* En tu archivo footer.css */
+.footer {
+    background-image: url('https://www.pixel4k.com/wp-content/uploads/2018/03/FC%20Barcelona%20Football%20club%20Team9628514215.jpg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
