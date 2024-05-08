@@ -26,38 +26,32 @@ const handleCardClick = () => {
     // Aquí puedes manejar el evento de clic en la tarjeta
   
 };
-
+const { name, image, designation, experience, ratings } = socio;
 
   return (
     <Link to={`/socios/${socio.rut_socio}`}>
-    <ButtonBase onClick={handleCardClick}>
-    <Card sx={{ maxWidth: 400 }}>
-      <CardHeader
-       
-        title={`${socio.socio_first_nombre} ${socio.socio_second_nombre} ${socio.socio_first_apellido} ${socio.socio_second_apellido}`}
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        component="img"
-        height="194"
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-            {`${socio.socio_first_nombre} ${socio.socio_second_nombre} ${socio.socio_first_apellido} ${socio.socio_second_apellido}`}        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-       
-      </CardActions>
-      
-     
-    </Card>
-    </ButtonBase>
+      <div className="card card-compact max-w-md shadow-xl border-2 border-darkbody rounded-s">
+        <figure>
+          <img
+            className="w-96 h-96 object-cover hover:grayscale transition-all duration-300"
+            src={image}
+            alt="Shoes"
+          />
+        </figure>
+        <div className="card-body text-gray-800 dark:text-white p-4 border-black">
+          <h2 className="card-title font-poppins">{name}</h2>
+          <p className="-mt-2 font-open-sans">{designation}</p>
+          <p className="-mt-2 text-base font-open-sans">
+            <span className="font-semibold">Experience:</span> {experience}{" "}
+            years
+          </p>
+          <p className="-mt-2 text-base flex gap-2 items-center font-open-sans">
+            <span className="font-semibold">Ratings:</span>{" "}
+            
+            {ratings}
+          </p>
+        </div>
+      </div>
     </Link>
   );
 }

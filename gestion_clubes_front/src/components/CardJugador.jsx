@@ -27,33 +27,33 @@ const handleCardClick = () => {
     console.log(`/jugadores/${jugador.rut_deportista}`);
 };
 
+const { name, image, designation, experience, ratings } = jugador;
 
   return (
     <Link to={`/jugadores/${jugador.rut_deportista}`}>
-    <ButtonBase onClick={handleCardClick}>
-    <Card sx={{ maxWidth: 400 }}>
-      <CardHeader
-        
-        title={`${jugador.deportista_first_nombre} ${jugador.deportista_second_nombre} ${jugador.deportista_first_apellido} ${jugador.deportista_second_apellido}`}
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image={`${serverUrl}${jugador.img}`}    
-        alt={jugador.rut_deportista}
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-           {jugador.deportista_first_apellido}
-        </Typography>
-      </CardContent>
-    
-    
-       
       
-     
-    </Card>
-    </ButtonBase>
+    <div className="card card-compact max-w-md shadow-xl border-2 border-darkbody rounded-s">
+        <figure>
+          <img
+            className="w-96 h-96 object-cover hover:grayscale transition-all duration-300"
+            src={image}
+            alt="Shoes"
+          />
+        </figure>
+        <div className="card-body text-gray-800 dark:text-white p-4 border-black">
+          <h2 className="card-title font-poppins">{name}</h2>
+          <p className="-mt-2 font-open-sans">{designation}</p>
+          <p className="-mt-2 text-base font-open-sans">
+            <span className="font-semibold">Experience:</span> {experience}{" "}
+            years
+          </p>
+          <p className="-mt-2 text-base flex gap-2 items-center font-open-sans">
+            <span className="font-semibold">Ratings:</span>{" "}
+            
+            {ratings}
+          </p>
+        </div>
+      </div>
     </Link>
   );
 }
